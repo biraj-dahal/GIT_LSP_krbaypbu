@@ -1,16 +1,29 @@
 package org.howard.edu.lsp.assignment2;
 
 import java.util.Scanner;
-import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class WordCounting {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		String fileName = "src/org/howard/edu/lsp/assignment2/words.txt";
-		Scanner lineScanner = new Scanner(new File(fileName));
+		
+		String wordsPath = "/src/org/howard/edu/lsp/assignment2/words.txt";
+
+        String curDir = System.getProperty("user.dir");
+        Path fileName = Paths.get(curDir, wordsPath);
+        
+		Scanner lineScanner = null;
+		try {
+			lineScanner = new Scanner(fileName);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("The file we will be reading from is \"words.txt\" \n\nHere is the content:\n\n");
 		
@@ -21,7 +34,13 @@ public class WordCounting {
 		
 		LinkedHashMap<String, Integer> wordCountMap = new LinkedHashMap<>();
 		
-		Scanner scanner = new Scanner(new File(fileName));
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(fileName);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("\n\nHere is the frequency count of words for the paragraph above:\n\n");
 		
