@@ -21,7 +21,6 @@ public class WordCounting {
 		try {
 			lineScanner = new Scanner(fileName);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -38,7 +37,6 @@ public class WordCounting {
 		try {
 			scanner = new Scanner(fileName);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
