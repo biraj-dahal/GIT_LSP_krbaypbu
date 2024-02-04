@@ -13,8 +13,7 @@ public class WordCounting {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		String wordsPath = File.separator + "src" + File.separator + "org" + File.separator + "howard" + File.separator + "edu" + File.separator + "lsp" + File.separator + "assignment2" + File.separator + "words.txt";
-
+		String wordsPath = File.separator + "large-scale-programming" + File.separator + "src" + File.separator + "org" + File.separator + "howard" + File.separator + "edu" + File.separator + "lsp" + File.separator + "assignment2" + File.separator + "words.txt";
 
         String curDir = System.getProperty("user.dir");
         Path fileName = Paths.get(curDir, wordsPath);
