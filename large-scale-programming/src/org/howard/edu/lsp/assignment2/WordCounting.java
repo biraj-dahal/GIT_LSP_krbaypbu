@@ -1,6 +1,7 @@
 package org.howard.edu.lsp.assignment2;
 
 import java.util.Scanner;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -12,7 +13,8 @@ public class WordCounting {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		String wordsPath = "/src/org/howard/edu/lsp/assignment2/words.txt";
+		String wordsPath = File.separator + "src" + File.separator + "org" + File.separator + "howard" + File.separator + "edu" + File.separator + "lsp" + File.separator + "assignment2" + File.separator + "words.txt";
+
 
         String curDir = System.getProperty("user.dir");
         Path fileName = Paths.get(curDir, wordsPath);
@@ -30,6 +32,7 @@ public class WordCounting {
 			String line = lineScanner.nextLine();
 			System.out.println(line);
 		}
+		lineScanner.close();
 		
 		LinkedHashMap<String, Integer> wordCountMap = new LinkedHashMap<>();
 		
