@@ -1,3 +1,6 @@
+/**
+*  Name: Biraj Dahal
+*/
 package org.howard.edu.lsp.assignment2; //package structure we will be using
 
 import java.util.Scanner; // Class Scanner to read through the text in a file.
@@ -50,12 +53,12 @@ public class WordCounting { // Class WordCounting where we define the workflow
 				continue;
 			}
 			if (curWord.contains("'")) { // if there is a contraction
-                String[] contractions = curWord.split("'"); // spilt the word into two parts
-                if(contractions[0].length() >3) {  // check if the separated part is of length > 3
-                wordCountMap.put(contractions[0], wordCountMap.getOrDefault(contractions[0], 0) + 1); //put the curWord to the Map as key, and put the value as 0 if it already doesnt exist else keep existing +1
+                String[] twoParts = curWord.split("'"); // spilt the word into two parts
+                if(twoParts[0].length() >3) {  // check if the separated part is of length > 3
+                wordCountMap.put(twoParts[0], wordCountMap.getOrDefault(twoParts[0], 0) + 1); //put the curWord to the Map as key, and put the value as 0 if it already doesnt exist else keep existing +1
                 }
-                if(contractions[1].length() >3) {// check if the separated part is of length > 3
-                wordCountMap.put(contractions[1], wordCountMap.getOrDefault(contractions[1], 0) + 1); //put the curWord to the Map as key, and put the value as 0 if it already doesnt exist else keep existing +1
+                if(twoParts[1].length() >3) {// check if the separated part is of length > 3
+                wordCountMap.put(twoParts[1], wordCountMap.getOrDefault(twoParts[1], 0) + 1); //put the curWord to the Map as key, and put the value as 0 if it already doesnt exist else keep existing +1
                 }
             } else {
                 wordCountMap.put(curWord, wordCountMap.getOrDefault(curWord, 0) + 1); //put the curWord to the Map as key, and put the value as 0 if it already doesnt exist else keep existing +1
