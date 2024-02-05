@@ -7,7 +7,7 @@ import java.util.LinkedHashMap; // Using Linked HashMap to keep the order of wor
 import java.util.Map; // since LinkedHashMap doesn't have an iterator of itself, we will use Map's iterator
 import java.nio.file.Path; // to built a Path for the file.
 import java.nio.file.Paths; // to built path for the File.
-import java.net.URL;
+import java.net.URL; // to get the path of the user.
 
 public class WordCounting { // Class WordCounting where we define the workflow
 
