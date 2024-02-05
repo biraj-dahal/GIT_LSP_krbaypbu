@@ -16,8 +16,6 @@ public class WordCounting { // Class WordCounting where we define the workflow
 		URL url = WordCounting.class.getResource("words.txt");
         String filePath = url.getPath(); 
         
-        System.out.println(filePath);
-
         Path fileName = Paths.get(filePath); // add the current working directory to the relative path, and make make absolute path for that host computer
         
 		Scanner lineScanner = null; // Scanner object defined to read, and print 
