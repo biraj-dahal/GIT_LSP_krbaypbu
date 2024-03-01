@@ -18,7 +18,7 @@ public class IntegerSet  {
 	public IntegerSet() {
 		set = new ArrayList<Integer>();
 	}
-
+	
 	// Constructor if you want to pass in already initialized
     /**
      * Constructor for IntegerSet.
@@ -54,6 +54,8 @@ public class IntegerSet  {
      * @param o The object to compare.
      * @return True if the sets are equal, false otherwise.
      */
+	
+@Override
 public boolean equals(Object o) {
 	if(o instanceof IntegerSet){
 		IntegerSet helper = (IntegerSet)o;
@@ -225,6 +227,7 @@ boolean isEmpty() {
  * Returns the string representation of the set.
  * @return The string representation of the set.
  */
+@Override
 public String toString() {
 	
 	System.out.println(this.set.toString());
