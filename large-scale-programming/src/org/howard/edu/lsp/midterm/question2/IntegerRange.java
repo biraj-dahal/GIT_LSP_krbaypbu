@@ -93,10 +93,10 @@ public class IntegerRange implements Range{
     	if(!(o instanceof IntegerRange)) {
     		return false;
     	}
-    	if(this==o) {
+    	if(this==o) { // check if this object is same as other object
     		return true;
     	}
-    	IntegerRange other = (IntegerRange) o;
+    	IntegerRange other = (IntegerRange) o; // create ans caste object to Integer Range
     	return this.lowerBound == other.lowerBound && this.upperBound == other.upperBound;
     }
 
